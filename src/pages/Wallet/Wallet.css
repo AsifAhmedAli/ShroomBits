@@ -1,10 +1,12 @@
+#wallet{
+    overflow: hidden;
+    padding-bottom: 3rem;
+}
 
-
-
-#wallet.light-theme{
+#wallet.light{
     background: var(--bg-light-primary);
 }
 
-#wallet.dark-theme{
+#wallet.dark{
     background: var(--bg-dark-primary);
 }

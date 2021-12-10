@@ -1,9 +1,21 @@
 import './Sidebar.css';
 import { sidebar_top_address, sidebar_top_img } from '../../../assets';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../ThemeContext';
 
 export default function Sidebar() {
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
+    const switchTheme = () => {
+        if (darkMode)
+            theme.dispatch({ type: "LIGHT" });
+        else
+            theme.dispatch({ type: "DARK" });
+    };
+
     return (
-        <section id="wallet_sidebar" className='light-theme'>
+        <section id="wallet_sidebar" className={`${darkMode ? 'dark' : 'light'}`}>
             <div className='content'>
                 <div className="top_section">
                     <img src={sidebar_top_img} alt="person" />
@@ -13,7 +25,7 @@ export default function Sidebar() {
                 <div className="theme_switcher">
                     <h6 className="text-capitalize">Dark mode</h6>
                     <div className="switch">
-                        <input type="checkbox" id="switch" />
+                        <input type="checkbox" id="switch" onClick={switchTheme} />
                     </div>
                 </div>
                 <div className="filters">
