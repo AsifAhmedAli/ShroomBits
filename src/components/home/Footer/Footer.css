@@ -1,0 +1,25 @@
+#home_footer{
+    padding: 5rem 0;
+    background: #fee4a6;
+    border-top: 1px solid #f7d6a5;
+}
+
+#home_footer .social_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home_footer .social_icons a{
+    margin: 0 1rem;
+    color: rgba(0,0,0,.55);
+}
+
+#home_footer .social_icons a i{
+    transition: all .3s ease;
+    font-size: 4rem;
+}
+
+#home_footer .social_icons a i:hover{
+    scale: 1.2
+}

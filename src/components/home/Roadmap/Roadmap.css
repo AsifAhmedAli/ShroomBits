@@ -1,0 +1,8 @@
+#roadmap{
+    background:linear-gradient(180deg,#d4d4b7 0,#d3d4b7 20%,#d2e1c8);
+}
+
+#roadmap .title{
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding-top: 5rem;
+}

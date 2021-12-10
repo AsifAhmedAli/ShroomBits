@@ -1,0 +1,127 @@
+#details{
+    z-index: 10;
+}
+
+#details .content {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#details .content .custom_container{
+    width: 80%;
+    margin: 0 auto
+}
+
+#details .content.shroom-gradient-1{
+    background: linear-gradient(180deg,#000 0,#cfad87 5%,#cfad87 90%,#c2b89e);
+}
+#details .content.shroom-gradient-2{
+    background: linear-gradient(180deg,#c2b89e 0,#b7c0b0 7%,#b7c0b0 90%,#b3c5bf);
+}
+#details .content.shroom-gradient-3{
+    background: linear-gradient(180deg,#b3c5bf 0,#b1c8c8 7%,#b1c8c8 90%,#c6c2b0);
+}
+#details .content.shroom-gradient-4{
+    background: linear-gradient(180deg,#c6c2b0 0,#dabd99 7%,#dabd99 90%,#d4d4b7)
+}
+
+#details .content .shroom_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    padding: 3rem 0;
+}
+
+#details .content .shroom_text{
+    width: 70%;
+    font-size: clamp(1rem, 5vw, 1.65rem);
+    margin: 0 auto;
+}
+
+#details .content .shroom_image{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#details .content .shroom_grid img{
+    width: 100%;
+    transition: scale 1s ease;
+}
+
+#details .content .shroom_grid img:hover{
+    scale: 1.2;
+}
+
+@media only screen and (max-width: 1200px) {
+    #details .content .shroom_image{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    #details .content .shroom_image{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #details .content .custom_container{
+        width: 100%;
+    }
+
+    #details .content .shroom_text{
+        text-align: center;
+        width: 90%;
+    }
+
+    #details .content{
+        padding: 1rem 0;
+    }
+    
+    #details .content .shroom_image{
+        width: 70%;
+    }
+
+    #details .content .shroom_grid{
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #details .content .shroom_image{
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    #details .content .shroom_grid{
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #details .content .shroom_image{
+        width: 80%;
+    }
+    #details .content .shroom_grid{
+        height: 75vh;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #details .content .shroom_image{
+        width: 70%;
+    }
+    #details .content .shroom_grid{
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    #details .content .shroom_grid{
+        height: 40vh;
+    }
+}

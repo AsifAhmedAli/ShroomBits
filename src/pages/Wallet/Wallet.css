@@ -1,0 +1,10 @@
+
+
+
+#wallet.light-theme{
+    background: var(--bg-light-primary);
+}
+
+#wallet.dark-theme{
+    background: var(--bg-dark-primary);
+}

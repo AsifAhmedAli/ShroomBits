@@ -1,0 +1,35 @@
+#team{
+    background:linear-gradient(180deg,#d2e1c8 0,#fee4a6);
+    padding-bottom: 7rem;
+}
+
+#team .title{
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+#team .card{
+    background: linear-gradient(-45deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.3));
+    box-shadow: 0 30px 61px 0 rgba(0,0,0,.1);
+    padding: 1rem;
+    border: none;
+    border-radius: .15rem;
+    transition: scale .3s ease;
+}
+
+#team .card:hover{
+    scale: 1.15;
+}
+
+#team .card-body{
+    padding: 1rem .5rem;
+}
+
+#team .card-body p{
+    color: rgba(0,0,0,.5);
+}
+
+@media only screen and (max-width: 768px) {
+    #team{
+        padding: 0 3rem;
+    }
+}
