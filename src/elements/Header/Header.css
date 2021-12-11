@@ -6,12 +6,12 @@
     padding-top: 0rem !important;
 }
 
-#header.navbar-custom{
-    background-color: var(--bg-primary) !important;
+#header.light{
+    background-color: var(--bg-light-primary) !important;
 }
 
-#header.navbar-custom-2{
-    background-color: none !important;
+#header.dark{
+    background-color: var(--bg-dark-primary) !important;
 }
 
 #header .header_title{
@@ -54,7 +54,7 @@
 }
 
 #header .navbar-nav .nav-link:hover{
-    background-color: var(--primary-color);
+    background-color: var(--bg-light-secondary);
 }
 
 #header.dark .navbar-nav .nav-link:hover{

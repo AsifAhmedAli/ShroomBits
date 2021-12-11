@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { light_theme_wallet_topbar } from '../../../assets';
+import { light_theme_wallet_topbar, dark_theme_wallet_topbar_2 } from '../../../assets';
 import { ThemeContext } from '../../../ThemeContext';
 import './TopBar.css';
 
@@ -10,7 +10,10 @@ export default function TopBar() {
         <section id="topbar" className={`${theme.state.darkMode ? 'dark' : 'light'}`}
         >
             <div className='topbar_img'>
-                <img src={light_theme_wallet_topbar} alt="light" />
+                {theme.state.darkMode ?
+                    <img src={dark_theme_wallet_topbar_2} alt="dark" /> :
+                    <img src={light_theme_wallet_topbar} alt="light" />
+                }
             </div>
             <div className="content">
                 <div className='text'>

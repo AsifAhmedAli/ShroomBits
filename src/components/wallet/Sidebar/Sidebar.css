@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     color: var(--light-sidebar-text);
+    z-index: 20;
 }
 
 #wallet_sidebar .content{
@@ -100,9 +101,19 @@
     font-weight: bold;
 }
 
-@media only screen and (max-width: 768px){
-    #wallet_sidebar{
-        width: 0px;
-        left: -100%;
+#wallet_sidebar .content.close{
+    display: none;
+}
+
+#wallet_sidebar .toggle_icon{
+    position: absolute;
+    top: 0;
+    left: .5rem;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px){
+    #wallet_sidebar .toggle_icon{
+        display: none;
     }
 }
