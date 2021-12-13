@@ -10,3 +10,13 @@
     width: 100%;
     height: 80vh;
   }
+
+  @media only screen and (max-width: 768px) {
+    #front_video {
+        height: 50vh;
+    }
+    #front_video video {
+        width: 100%;
+        height: 50vh;
+      }
+  }

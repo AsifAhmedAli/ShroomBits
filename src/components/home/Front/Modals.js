@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 
-export default function Modals({ modal, setModal, modal2, setModal2, counterIncrement, counterDecrement, counter, changeModal }) {
+export default function Modals({ modal, setModal, modal2, setModal2, counterIncrement, counterDecrement, counter, changeModal, submitHandler }) {
     return (
         <div>
             {modal && <div className="first_modal">
@@ -42,7 +42,7 @@ export default function Modals({ modal, setModal, modal2, setModal2, counterIncr
                     </div>
                     <div className="modal_bottom text-center">
                         <h3 className="my-4 fw-bold">Approve WETH</h3>
-                        <Button>Approve</Button>
+                        <Button onClick={submitHandler}>Approve</Button>
 
                         <div className="mt-2 modal_cancel">
                             <Button onClick={changeModal}>Cancel</Button>

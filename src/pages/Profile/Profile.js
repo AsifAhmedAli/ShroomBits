@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { Container } from 'react-bootstrap';
+import { useContext, useState } from 'react';
+import { Button, Container } from 'react-bootstrap';
 import Header from '../../elements/Header/Header';
 import { ThemeContext } from '../../ThemeContext';
 import './Profile.css';
@@ -7,11 +7,50 @@ import { asset_1, percentage, profile_vector_1 } from '../../assets';
 
 export default function Profile() {
     const theme = useContext(ThemeContext);
+    const [nameModal, setNameModal] = useState(false);
+    const [memoModal, setMemoModal] = useState(false);
+
+    const changeNameModal = () => {
+        setNameModal(!nameModal);
+    }
+
+    const changeMemoModal = () => {
+        setMemoModal(!memoModal);
+    }
+
+    const closeModal = () => {
+        setNameModal(false);
+        setMemoModal(false);
+    }
 
     return (
         <section id="profile" className={`${theme.state.darkMode ? 'dark' : 'light'}`}>
             <Header title="shroombits" />
-            <h3 className='text-center fw-bold top_title py-3 mb-3'>Asset#000</h3>
+            <h3 className='text-center top_title py-3 mb-3'>Asset #000</h3>
+
+            {nameModal ? <div className="custom_modal">
+                <div className="close_modal">
+                    <i className="fas fa-times" onClick={closeModal}></i>
+                </div>
+                <div className="modal_bottom text-center">
+                    <input type="text" placeholder='Enter Name' />
+                    <br />
+                    <Button>cancel</Button>
+                    <Button>Save changes</Button>
+                </div>
+            </div> : ''}
+
+            {memoModal ? <div className="custom_modal">
+                <div className="close_modal">
+                    <i className="fas fa-times" onClick={closeModal}></i>
+                </div>
+                <div className="modal_bottom text-center">
+                    <textarea type="text" placeholder='Enter Bio' />
+                    <br />
+                    <Button>cancel</Button>
+                    <Button>Save changes</Button>
+                </div>
+            </div> : ''}
 
             <Container>
                 <div className="row justify-content-between">
@@ -26,7 +65,7 @@ export default function Profile() {
                                     <div>
                                         <b className='label'>Given Name:</b><span className='text-capitalize'>Awesome Shroomy</span>
                                     </div>
-                                    <button className='btn'>edit</button>
+                                    <button className='btn' onClick={changeNameModal}>edit</button>
                                 </div>
                                 <div className='info'>
                                     <b className='label'>Birthday:</b><span className='text-capitalize'>July,12021</span>
@@ -34,7 +73,7 @@ export default function Profile() {
                                 <div className='info flexed-col'>
                                     <div className='flexed'>
                                         <b className='label'>Memo:</b>
-                                        <button className='btn'>edit</button>
+                                        <button className='btn' onClick={changeMemoModal}>edit</button>
                                     </div>
                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                                 </div>

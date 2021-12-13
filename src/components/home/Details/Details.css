@@ -96,7 +96,7 @@
         margin-bottom: 1rem;
     }
     #details .content .shroom_grid{
-        height: 60vh;
+        height: 100vh;
     }
 }
 
@@ -105,7 +105,7 @@
         width: 80%;
     }
     #details .content .shroom_grid{
-        height: 75vh;
+        height: 90vh;
     }
 }
 
@@ -115,13 +115,12 @@
         width: 70%;
     }
     #details .content .shroom_grid{
-        height: 60vh;
+        height: 100vh;
     }
 }
 
-@media only screen and (max-width: 400px) {
-    
+@media only screen and (max-width: 375px) {
     #details .content .shroom_grid{
-        height: 40vh;
+        height: 60vh;
     }
 }

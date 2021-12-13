@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/clash-display');
 
 *{
   margin: 0;
@@ -14,7 +15,7 @@ h1,h2,h3,h4,h5,h6{
   --bg-primary: #BDC8C5;
   --bg-secondary: #131129;
   --bg-light-primary: #FEFBF3;
-  --bg-light-secondary: #C1D3CD;
+  --bg-light-secondary: #98BAAF;
   --bg-dark-primary: #131129;
   --bg-dark-secondary: #1D1933;
   --primary-color: #FEFBF3;
@@ -22,7 +23,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .App{
-  font-family: 'Quantico', sans-serif;
+  font-family: 'Clash Display', sans-serif;
   background-color: var(--bg-primary);
 }
 

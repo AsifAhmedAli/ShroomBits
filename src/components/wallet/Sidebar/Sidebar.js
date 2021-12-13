@@ -35,9 +35,10 @@ export default function Sidebar() {
                 </div>
                 <div className="theme_switcher">
                     <h6 className="text-capitalize">Dark mode</h6>
-                    <div className="switch">
-                        <input type="checkbox" id="switch" onClick={switchTheme} />
-                    </div>
+                    <label class="switch">
+                        <input type="checkbox" onClick={switchTheme} />
+                        <span class="slider round"></span>
+                    </label>
                 </div>
                 <div className="filters">
                     <h6 className="filter_text">Filters</h6>

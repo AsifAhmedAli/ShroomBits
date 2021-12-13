@@ -1,0 +1,156 @@
+#rewards{
+    background-color: var(--bg-light-primary);
+    color: #565656;
+    padding-bottom: 4rem;
+}
+
+#rewards.dark{
+    background-color: var(--bg-dark-primary);
+}
+
+
+#rewards .top_title{
+    background-color: var(--bg-light-secondary);
+    color: #565656;
+}
+
+#rewards.dark .top_title{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: var(--bg-dark-secondary);
+    color: white;
+}
+
+#rewards.dark .top_title span{
+    opacity: .7;
+}
+
+#rewards .content .cards{
+    width: 80%;
+    margin: 2rem 0;
+}
+
+#rewards .content .cards .card img{
+    width: 9rem;
+    height: 80%;
+    padding-bottom: 3rem;
+}
+
+#rewards .content .cards .card .card-body{
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+#rewards .content .cards .card .card-body .btn{
+    background-color: rgba(254, 251, 243, 0.5);
+    border-radius: 13px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem .5rem;
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#rewards .content .cards .card .card-body .btn.orange{
+    background-color: orange;
+}
+#rewards .content .cards .card .card-body .btn.green{
+    background-color: #82CEAE;
+}
+#rewards .content .cards .card .card-body .btn.purple{
+    background-color: #C49AE6;
+}
+#rewards .content .cards .card .card-body .btn.blue{
+    background-color: #7EB3E4;
+}
+
+#rewards .content .cards .card .card-title{
+    background-color: #C1D3CD;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: .5rem 0;
+    color: #565656;
+    font-weight: bold;
+}
+
+#rewards.dark .content .cards .card .card-title{
+    background-color: #0a0624;
+}
+
+#rewards .content .cards .card{
+    background: var(--bg-light-secondary);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+#rewards .content .cards .card .card-body img{
+    width: 1.2rem;
+}
+
+#rewards.dark .content .cards .card{
+    background: var(--bg-dark-secondary);
+}
+
+#rewards .preview{
+    width: 100%;
+    margin-top: 4.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    background-color: var(--bg-light-secondary);
+}
+
+#rewards.dark .preview{
+    background-color: var(--bg-dark-secondary);
+}
+
+#rewards .preview img{
+    width: 15rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #rewards .content .cards .card{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #rewards .content .cards{
+        width: 100%;
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #rewards .content .cards .card{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #rewards .preview{
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #rewards .content .cards .card{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #rewards .content .cards{
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+}

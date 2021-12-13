@@ -169,9 +169,15 @@
     color: #337483;
 }
 
+@media only screen and (max-width: 1200px){
+    #front{
+        height: 100vh;
+    }
+}
+
 @media only screen and (max-width: 990px){
     #front{
-        height: 100vh
+        height: 100vh;
     }
     
     #front .content img{
@@ -193,19 +199,27 @@
     #front{
         height: 90vh;
     }
+    #front .first_modal{
+        height: 70%;
+    }
     #front .first_modal, #front .second_modal{
         width: 90%;
     }
+
 }
 
 @media only screen and (max-width: 500px){
     #front{
         height: 80vh;
     }
+    
+    #front .first_modal .modal_content .modal_bottom .modal_btns .btn:first-of-type{
+        margin-bottom: 1rem;
+    }
 }
 
 @media only screen and (max-width: 400px){
     #front{
-        height: 70vh;
+        height: 60vh;
     }
 }

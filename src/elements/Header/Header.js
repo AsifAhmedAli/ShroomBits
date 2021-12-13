@@ -17,12 +17,12 @@ export default function Header({ title }) {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#">Home</Nav.Link>
-                        <Nav.Link href="#market">Marketplace</Nav.Link>
-                        <Nav.Link href="#metaverse">Metaverse</Nav.Link>
-                        <Nav.Link href="#whitepaper">Whitepaper</Nav.Link>
+                        <Link className='nav-link' to="/">Home</Link>
+                        <Link className='nav-link' to="/attach">Marketplace</Link>
+                        <Link className='nav-link' to="/wallet/2">Metaverse</Link>
+                        <Link className='nav-link' to="/rewards">Whitepaper</Link>
                         <div className='nav-link'>
-                            <Link to="/"><img src={wallet_navbar} alt="wallet" /></Link>
+                            <Link to="/wallet"><img src={wallet_navbar} alt="wallet" /></Link>
                         </div>
                     </Nav>
                 </Navbar.Collapse>

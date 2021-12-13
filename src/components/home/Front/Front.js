@@ -22,6 +22,11 @@ export default function Front() {
         setCounter(counter - 1);
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log("submitted");
+    }
+
     return (
         <section id="front">
             <Modals modal={modal}
@@ -32,6 +37,7 @@ export default function Front() {
                 counterDecrement={counterDecrement}
                 counter={counter}
                 changeModal={changeModal}
+                submitHandler={submitHandler}
             />
 
             <Container>
