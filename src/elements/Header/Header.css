@@ -11,6 +11,10 @@
     background-color: var(--bg-light-primary) !important;
 }
 
+#header.light.navbar-custom{
+    background-color: #BDC8C5 !important;
+}
+
 #header.dark{
     background-color: var(--bg-dark-primary) !important;
 }
@@ -51,6 +55,10 @@
     background-color: var(--bg-light-secondary);
 }
 
+#header.light.navbar-custom .navbar-nav .nav-link:last-child{
+    background-color: #FEFBF3;
+}
+
 #header .navbar-nav img{
     width: 1.5rem;
     height: 1.5rem;
@@ -70,6 +78,10 @@
 
 #header.navbar-custom-2 .nav-link:hover{
     background-color: var(--bg-light-secondary);
+}
+
+#header.light.navbar-custom .nav-link:hover{
+    background-color: #FEFBF3;
 }
 
 @media only screen and (max-width: 990px) {
