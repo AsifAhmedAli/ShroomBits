@@ -4,7 +4,7 @@
 }
 
 #assets .content .cards .card{
-    background: var(--bg-light-secondary);
+    background: #C1D3CD;
     border-radius: 10px;
     height: 100%;
     display: flex;
@@ -50,6 +50,11 @@
     border-radius: 13px;
     width: 90%;
     color: #E1E0E9;
+}
+
+#assets .content a{
+    color: black;
+    text-decoration: none;
 }
 
 #assets .content .cards .card .card-body img{

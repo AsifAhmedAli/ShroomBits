@@ -19,7 +19,7 @@
 }
 
 #wallet_sidebar .content{
-    background-color: var(--bg-light-secondary);
+    background-color: #C1D3CD;
 }
 
 #wallet_sidebar.dark .content{

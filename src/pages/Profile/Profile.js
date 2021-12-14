@@ -3,7 +3,8 @@ import { Button, Container } from 'react-bootstrap';
 import Header from '../../elements/Header/Header';
 import { ThemeContext } from '../../ThemeContext';
 import './Profile.css';
-import { asset_1, percentage, profile_vector_1 } from '../../assets';
+import { asset_1, cart, percentage, pillar, profile_vector_1, rewards } from '../../assets';
+import { Link } from 'react-router-dom';
 
 export default function Profile() {
     const theme = useContext(ThemeContext);
@@ -28,27 +29,32 @@ export default function Profile() {
             <Header title="shroombits" />
             <h3 className='text-center top_title py-3 mb-3'>Asset #000</h3>
 
-            {nameModal ? <div className="custom_modal">
-                <div className="close_modal">
-                    <i className="fas fa-times" onClick={closeModal}></i>
-                </div>
-                <div className="modal_bottom text-center">
-                    <input type="text" placeholder='Enter Name' />
-                    <br />
-                    <Button>cancel</Button>
-                    <Button>Save changes</Button>
+            {nameModal ? <div className='custom_modal_layer'>
+                <div className="custom_modal">
+                    <div className="close_modal">
+                        <div onClick={closeModal}>x</div>
+                    </div>
+                    <div className="modal_bottom text-center">
+                        <input type="text" placeholder='Enter Name' />
+                        <br />
+                        <Button>cancel</Button>
+                        <Button>Save changes</Button>
+                    </div>
                 </div>
             </div> : ''}
 
-            {memoModal ? <div className="custom_modal">
-                <div className="close_modal">
-                    <i className="fas fa-times" onClick={closeModal}></i>
-                </div>
-                <div className="modal_bottom text-center">
-                    <textarea type="text" placeholder='Enter Bio' />
-                    <br />
-                    <Button>cancel</Button>
-                    <Button>Save changes</Button>
+            {memoModal ? <div className='custom_modal_layer'>
+                <div className="custom_modal">
+                    <div className="close_modal">
+                        <div onClick={closeModal}>x</div>
+
+                    </div>
+                    <div className="modal_bottom text-center">
+                        <textarea type="text" placeholder='Enter Bio' />
+                        <br />
+                        <Button>cancel</Button>
+                        <Button>Save changes</Button>
+                    </div>
                 </div>
             </div> : ''}
 
@@ -110,22 +116,22 @@ export default function Profile() {
                             </div>
                         </div>
                         <div className='bottom_sections mt-4'>
-                            <div className='sec py-2 px-1'>
+                            <Link to='/wallet/attach' className='sec py-2'>
                                 <img src={profile_vector_1} alt="attach" />
                                 <p className="text-capitalize my-2 px-1 text-center">Attach assets</p>
-                            </div>
-                            <div className='sec py-2 px-1'>
-                                <img src={profile_vector_1} alt="attach" />
-                                <p className="text-capitalize my-2 px-1 text-center">Attach assets</p>
-                            </div>
-                            <div className='sec py-2 px-1'>
-                                <img src={profile_vector_1} alt="attach" />
-                                <p className="text-capitalize my-2 px-1 text-center">Attach assets</p>
-                            </div>
-                            <div className='sec py-2 px-1'>
-                                <img src={profile_vector_1} alt="attach" />
-                                <p className="text-capitalize my-2 px-1 text-center">Attach assets</p>
-                            </div>
+                            </Link>
+                            <Link to='/wallet/rewards' className='sec py-2 px-1'>
+                                <img src={rewards} alt="attach" />
+                                <p className="text-capitalize my-2 px-1 text-center">Rewards</p>
+                            </Link>
+                            <Link to='wallet/asset/2' className='sec py-2 px-1'>
+                                <img src={cart} alt="attach" />
+                                <p className="text-capitalize my-2 px-1 text-center">Sell</p>
+                            </Link>
+                            <Link to='wallet/asset/2' className='sec py-2 px-1'>
+                                <img src={pillar} alt="attach" />
+                                <p className="text-capitalize my-2 px-1 text-center">Bridge</p>
+                            </Link>
                         </div>
                     </div>
                 </div>

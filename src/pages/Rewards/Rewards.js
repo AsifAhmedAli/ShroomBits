@@ -2,7 +2,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import './Rewards.css';
 import Header from "../../elements/Header/Header";
 import { asset_1, asset_2, asset_3, asset_4, card_icon, card_icon_2 } from "../../assets";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../../ThemeContext";
 
 const cards = [
@@ -38,11 +38,43 @@ const cards = [
 ]
 
 export default function Rewards() {
-
     const theme = useContext(ThemeContext);
+    const [modal, setModal] = useState(false);
+
+    const handleModal = () => {
+        setModal(!modal);
+    }
+
+    const closeModal = () => {
+        setModal(false);
+    }
 
     return (
         <section id="rewards" className={theme.state.darkMode ? 'dark' : 'light'}>
+            {modal ? <div className='custom_modal_layer'>
+                <div className="custom_modal">
+                    <div className="close_modal">
+                        <div onClick={closeModal}>x</div>
+                    </div>
+                    <div className="modal_bottom text-center">
+                        <div className="circles">
+                            <div className="circle">
+                                <div>1</div>
+                                <h5 className="text-center text-capitalize">Approve <br />weth</h5>
+                            </div>
+                            <div className="circle">
+                                <div>2</div>
+                                <h5 className="text-capitalize text-center">Confirm <br /> Mint</h5>
+                            </div>
+                        </div>
+                        <div className="spinner"></div>
+                        <div className="btns">
+                            <Button className="bg-danger">Approve</Button>
+                            <Button>Cancel</Button>
+                        </div>
+                    </div>
+                </div>
+            </div> : ''}
             <Header title="shroombits" />
             <h4 className='text-center fw-bold top_title py-3 mb-3'><b>Rewards</b> &nbsp;&nbsp;&nbsp;&nbsp;<span className='fw-normal h5'>Shrooms#0000</span></h4>
             <Container>
@@ -58,7 +90,7 @@ export default function Rewards() {
                                                 <Card.Title className="text-center">{card.name}</Card.Title>
                                                 <Card.Img variant="top" src={card.image} />
                                                 <Card.Body>
-                                                    <Button className={`${card.color}`}>
+                                                    <Button className={`${card.color}`} onClick={handleModal}>
                                                         Claim now
                                                     </Button>
                                                 </Card.Body>

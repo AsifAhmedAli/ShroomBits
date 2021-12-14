@@ -17,7 +17,7 @@
 }
 
 #attachment .top_title{
-    background-color: var(--bg-light-secondary);
+    background-color: #C1D3CD;
     color: #565656;
 }
 
@@ -28,7 +28,7 @@
 }
 
 #attachment .left_col_top .dropdown button{
-    background-color: var(--bg-light-secondary);
+    background-color: #C1D3CD;
     border: none;
 }
 
@@ -42,7 +42,7 @@
 
 #attachment .left_col_top .input-group input{
     background-color: var(--bg-light-primary);
-    border: 1px solid var(--bg-light-secondary);
+    border: 1px solid #C1D3CD;
 }
 
 #attachment.dark .left_col_top .input-group input{
@@ -56,12 +56,12 @@
     border-radius: .9rem;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    border: 1px solid var(--bg-light-secondary);
+    border: 1px solid #C1D3CD;
 }
 
 #attachment .left_col_top .input-group .input-group-append{
     border-left: 0px;
-    border: 1px solid var(--bg-light-secondary);
+    border: 1px solid #C1D3CD;
     border-top-right-radius: .9rem;
     border-bottom-right-radius: .9rem;
 }
@@ -93,7 +93,7 @@
 }
 
 #attachment .content .cards .card{
-    background: var(--bg-light-secondary);
+    background: #C1D3CD;
     border-radius: 10px;
     height: 100%;
     display: flex;
@@ -134,7 +134,7 @@
     align-items: center;
     justify-content: center;
     padding: 5rem 0;
-    background-color: var(--bg-light-secondary);
+    background-color: #C1D3CD;
 }
 
 #attachment.dark .preview{

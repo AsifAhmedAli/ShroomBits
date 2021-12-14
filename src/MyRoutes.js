@@ -11,9 +11,9 @@ export default function MyRoutes() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="wallet" element={<Wallet />} />
-                <Route path="wallet/:id" element={<Profile />} />
-                <Route path="/attach" element={<Attachment />} />
-                <Route path="/rewards" element={<Rewards />} />
+                <Route path="wallet/asset/:id" element={<Profile />} />
+                <Route path="wallet/attach" element={<Attachment />} />
+                <Route path="wallet/rewards" element={<Rewards />} />
             </Routes>
         </BrowserRouter>
     )

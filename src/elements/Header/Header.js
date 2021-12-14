@@ -18,9 +18,9 @@ export default function Header({ title }) {
                     </Nav>
                     <Nav>
                         <Link className='nav-link' to="/">Home</Link>
-                        <Link className='nav-link' to="/attach">Marketplace</Link>
-                        <Link className='nav-link' to="/wallet/2">Metaverse</Link>
-                        <Link className='nav-link' to="/rewards">Whitepaper</Link>
+                        <Link className='nav-link' to="/">Marketplace</Link>
+                        <Link className='nav-link' to="/">Metaverse</Link>
+                        <Link className='nav-link' to="/">Whitepaper</Link>
                         <div className='nav-link'>
                             <Link to="/wallet"><img src={wallet_navbar} alt="wallet" /></Link>
                         </div>
