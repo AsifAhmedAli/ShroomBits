@@ -78,6 +78,19 @@
     background-color: var(--bg-light-secondary);
 }
 
+#header .navbar-nav .nav-link.active{
+    background-color: #FEFBF3;
+}
+
+#header .navbar-nav .nav-link:last-of-type.active{
+    background-color: var(--bg-light-secondary);
+}
+
+#header.dark .navbar-nav .nav-link:last-of-type.active{
+    background-color: var(--bg-dark-secondary);
+}
+
+
 #header.dark .navbar-nav .nav-link:hover{
     background-color: #CBD0C6;
     color: black;

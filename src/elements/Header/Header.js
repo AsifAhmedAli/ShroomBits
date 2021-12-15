@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import wallet_navbar from '../../assets/wallet_navbar.png';
 import { ThemeContext } from '../../ThemeContext';
 import './Header.css';
@@ -17,13 +17,11 @@ export default function Header({ title }) {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Link className='nav-link' to="/">Home</Link>
+                        <NavLink className='nav-link' to="/" activeClassName="active">Home</NavLink>
                         <Link className='nav-link' to="/">Marketplace</Link>
                         <Link className='nav-link' to="/">Metaverse</Link>
                         <Link className='nav-link' to="/">Whitepaper</Link>
-                        <div className='nav-link'>
-                            <Link to="/wallet"><img src={wallet_navbar} alt="wallet" /></Link>
-                        </div>
+                        <NavLink to="/wallet" className="nav-link" activeClassName="active"><img src={wallet_navbar} alt="wallet" /></NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
