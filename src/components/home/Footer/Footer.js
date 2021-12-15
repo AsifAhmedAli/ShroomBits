@@ -11,6 +11,9 @@ export default function Footer() {
                     <a href="https://medium.com/"><i className="fab fa-medium-m"></i></a>
                 </div>
             </Container>
+            <div className="copyright">
+                © Shroomtopia 2021
+            </div>
         </footer>
     )
 }

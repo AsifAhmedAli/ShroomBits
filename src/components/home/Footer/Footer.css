@@ -1,5 +1,4 @@
 #home_footer{
-    padding: 5rem 0;
     background: #fee4a6;
     border-top: 1px solid #f7d6a5;
 }
@@ -8,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4rem 0;
 }
 
 #home_footer .social_icons a{
@@ -21,5 +21,12 @@
 }
 
 #home_footer .social_icons a i:hover{
-    scale: 1.2
+    scale: 1.2;
+}
+
+#home_footer .copyright{
+    text-align: center;
+    background-color: #FFF2D3;
+    color: #C2BCA6;
+    padding: 1rem 0;
 }
