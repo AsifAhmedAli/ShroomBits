@@ -31,13 +31,10 @@ export default function Profile() {
 
             {nameModal ? <div className='custom_modal_layer'>
                 <div className="custom_modal">
-                    <div className="close_modal">
-                        <div onClick={closeModal}>x</div>
-                    </div>
                     <div className="modal_bottom text-center">
                         <input type="text" placeholder='Enter Name' />
                         <br />
-                        <Button>cancel</Button>
+                        <Button onClick={closeModal}>cancel</Button>
                         <Button>Save changes</Button>
                     </div>
                 </div>
@@ -45,14 +42,10 @@ export default function Profile() {
 
             {memoModal ? <div className='custom_modal_layer'>
                 <div className="custom_modal">
-                    <div className="close_modal">
-                        <div onClick={closeModal}>x</div>
-
-                    </div>
                     <div className="modal_bottom text-center">
                         <textarea type="text" placeholder='Enter Bio' />
                         <br />
-                        <Button>cancel</Button>
+                        <Button onClick={closeModal}>cancel</Button>
                         <Button>Save changes</Button>
                     </div>
                 </div>

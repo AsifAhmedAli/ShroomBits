@@ -5,9 +5,6 @@ export default function Modals({ modal, setModal, modal2, setModal2, counterIncr
         <div>
             {modal && <div className="custom_modal_layer">
                 <div className="first_modal">
-                    <div className="close_modal">
-                        <i className="fas fa-times" onClick={() => setModal(false)}></i>
-                    </div>
                     <div className="modal_content">
                         <div className="modal_top text-center">
                             <h5 className="mb-1">Price <b>0.06 ETH/WETH</b></h5>
@@ -26,7 +23,7 @@ export default function Modals({ modal, setModal, modal2, setModal2, counterIncr
                                 <Button>Etherium</Button>&nbsp;&nbsp;&nbsp;
                                 <Button onClick={changeModal}>Matic (Polygon)</Button>
                             </div>
-                            <div className="modal_cancel">
+                            <div className="modal_cancel" onClick={() => setModal(false)}>
                                 <Button onClick={() => setModal(false)}>Cancel</Button>
                             </div>
                         </div>
@@ -36,9 +33,6 @@ export default function Modals({ modal, setModal, modal2, setModal2, counterIncr
 
             {modal2 && <div className="custom_modal_layer">
                 <div className="second_modal">
-                    <div className="close_modal" onClick={() => setModal(false)}>
-                        <i className="fas fa-times" onClick={changeModal}></i>
-                    </div>
                     <div className="modal_content">
                         <div className="modal_top text-center">
                             <h3>Step 1</h3>
@@ -47,7 +41,7 @@ export default function Modals({ modal, setModal, modal2, setModal2, counterIncr
                             <h3 className="my-4 fw-bold">Approve WETH</h3>
                             <Button onClick={submitHandler}>Approve</Button>
 
-                            <div className="mt-2 modal_cancel">
+                            <div className="mt-2 modal_cancel" onClick={() => setModal(false)}>
                                 <Button onClick={changeModal}>Cancel</Button>
                             </div>
                         </div>

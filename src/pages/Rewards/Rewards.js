@@ -53,9 +53,6 @@ export default function Rewards() {
         <section id="rewards" className={theme.state.darkMode ? 'dark' : 'light'}>
             {modal ? <div className='custom_modal_layer'>
                 <div className="custom_modal">
-                    <div className="close_modal">
-                        <div onClick={closeModal}>x</div>
-                    </div>
                     <div className="modal_bottom text-center">
                         <div className="circles">
                             <div className="circle">
@@ -70,7 +67,7 @@ export default function Rewards() {
                         <div className="spinner"></div>
                         <div className="btns">
                             <Button className="bg-danger">Approve</Button>
-                            <Button>Cancel</Button>
+                            <Button onClick={closeModal}>Cancel</Button>
                         </div>
                     </div>
                 </div>
