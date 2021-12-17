@@ -6,7 +6,6 @@
     left: 0;
     color: var(--light-sidebar-text);
     z-index: 20;
-
 }
 
 #wallet_sidebar .content{
@@ -16,10 +15,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-}
-
-#wallet_sidebar .content{
     background-color: #C1D3CD;
+    position: relative;
 }
 
 #wallet_sidebar.dark .content{
@@ -103,11 +100,12 @@
     display: none;
 }
 
-#wallet_sidebar .toggle_icon{
-    position: absolute;
-    top: 0;
-    left: .5rem;
+#wallet_sidebar .hide_filter{
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.1rem;
 }
 
 /* Theme switch toggler */

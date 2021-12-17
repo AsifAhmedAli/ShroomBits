@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { asset_1, asset_2, asset_3, asset_4, asset_5, card_icon, card_icon_2 } from "../../../assets";
 import { ThemeContext } from "../../../ThemeContext";
@@ -81,12 +81,23 @@ const cards = [
 
 ]
 
-export default function Assets() {
+export default function Assets({ toggleSidebar, setToggleSidebar }) {
     const theme = useContext(ThemeContext);
+    const [filter, setFilter] = useState(typeof window !== 'undefined' && window.matchMedia("(max-width: 820px)").matches);
+
+    useEffect(() => {
+        window.matchMedia("(max-width: 820px)").addEventListener('change', e => {
+            setFilter(e.matches);
+        });
+    }, [])
     return (
         <section id="assets" className={`${theme.state.darkMode ? 'dark' : 'light'}`}>
             <div className="content">
-                <h3 className="title my-5 text-capitalize">Trending Assets</h3>
+                <h3 className="title my-5 text-capitalize">{filter ?
+                    <a className="show-filters" onClick={() => setToggleSidebar(false)}>Show Filters</a> :
+                    <span>Trending Assets</span>
+                }
+                </h3>
                 <div className="cards">
                     <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-5">
                         {cards.map((card, id) => (

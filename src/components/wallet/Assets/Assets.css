@@ -57,6 +57,16 @@
     text-decoration: none;
 }
 
+#assets .show-filters{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#assets.dark .show-filters{
+    color: #E1E0E9;
+}
+
 #assets .content .cards .card .card-body img{
     width: 1.2rem;
     margin-top: 1rem;
