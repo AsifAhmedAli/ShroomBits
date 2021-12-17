@@ -61,6 +61,17 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+    padding: .5rem .5rem;
+    background: var(--bg-light-secondary);
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#assets.dark .show-filters{
+    background: var(--bg-dark-secondary);
 }
 
 #assets.dark .show-filters{

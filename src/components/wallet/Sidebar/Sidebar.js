@@ -1,11 +1,18 @@
 import './Sidebar.css';
 import { sidebar_top_address, sidebar_top_img } from '../../../assets';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../../../ThemeContext';
 
 export default function Sidebar({ toggleSidebar, setToggleSidebar }) {
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
+    const [toggleFilter, setToggleFilter] = useState(typeof window !== 'undefined' && window.matchMedia("(max-width: 820px)").matches);
+
+    useEffect(() => {
+        window.matchMedia("(max-width: 820px)").addEventListener('change', e => {
+            setToggleFilter(e.matches);
+        });
+    }, [])
 
     const switchTheme = () => {
         if (darkMode)
@@ -67,7 +74,7 @@ export default function Sidebar({ toggleSidebar, setToggleSidebar }) {
                         <input type="checkbox" />
                     </div>
                 </div>
-                <div className="hide_filter pb-3 pt-1" onClick={() => setToggleSidebar(!toggleSidebar)}><small>Hide filters</small></div>
+                <div className="hide_filter pb-3 pt-1" onClick={() => setToggleSidebar(!toggleSidebar)}><small>{toggleFilter && 'Hide filters'}</small></div>
             </div>
         </section>
     )
