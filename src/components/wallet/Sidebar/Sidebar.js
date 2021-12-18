@@ -74,7 +74,7 @@ export default function Sidebar({ toggleSidebar, setToggleSidebar }) {
                         <input type="checkbox" />
                     </div>
                 </div>
-                <div className="hide_filter pb-3 pt-1" onClick={() => setToggleSidebar(!toggleSidebar)}><small>{toggleFilter && 'Hide filters'}</small></div>
+                <div className="hide_filter" onClick={() => setToggleSidebar(!toggleSidebar)}><small>{toggleFilter && 'Hide filters'}</small></div>
             </div>
         </section>
     )
